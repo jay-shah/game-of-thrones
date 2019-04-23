@@ -1,2 +1,1 @@
-# game-of-thrones
-Game of Thrones season 8 game
+## Game of thrones game
