@@ -3,10 +3,11 @@ import './App.css';
 import { Grid, Header, Icon, Card, Divider } from 'semantic-ui-react'
 import Elliot from './images/jamie.jpg'
 import Daniel from './images/daniel.jpg'
+import CharacterCard from './components/CharacterCard'
 
 function App() {
   return (
-    <Grid divided columns={2} padded stackable >
+    <Grid divided columns={2} padded stackable  >
 
       <Grid.Column  >
         <Grid.Row className="Title"  >
@@ -20,86 +21,27 @@ function App() {
             <Header.Content>ALIVE</Header.Content>
           </Header>
         </Grid.Row>
-        <Grid columns={6} padded stackable >
-          <Grid.Row  >
-            <Grid.Column>
-              <Card
-                image={Elliot}
-                header='Jamie Lannister'
-              />
-            </Grid.Column>
-            <Grid.Column>
-              <Card
-                image={Elliot}
-                header='Elliot Baker'
-              />
-            </Grid.Column>
-            <Grid.Column>
-              <Card
-                image={Elliot}
-                header='Elliot Baker'
-              />
-            </Grid.Column>
-            <Grid.Column>
-              <Card
-                image={Elliot}
-                header='Elliot Baker'
-              />
-            </Grid.Column>
-            <Grid.Column>
-              <Card
-                image={Elliot}
-                header='Elliot Baker'
-              />
-            </Grid.Column>
-            <Grid.Column>
-              <Card
-                image={Elliot}
-                header='Elliot Baker'
-              />
-            </Grid.Column>
-          </Grid.Row>
+        <Grid padded stackable >
+          <CharacterCard image={Elliot} />
+          <CharacterCard image={Elliot} />
+          <CharacterCard image={Elliot} />
+          <CharacterCard image={Elliot} />
+          <CharacterCard image={Elliot} />
+          <CharacterCard image={Elliot} />
         </Grid>
         <Divider hidden />
-
         <Grid.Row  >
           <Header as='h2' icon textAlign='left' className="Alive" color="red">
             <Header.Content>DEAD</Header.Content>
           </Header>
         </Grid.Row>
-        <Grid divided columns={5} padded stackable >
-          <Grid.Row  >
-            <Grid.Column>
-              <Card
-                image={Daniel}
-                header='Daniel Baker'
-              />
-            </Grid.Column>
-            <Grid.Column>
-              <Card
-                image={Daniel}
-                header='Daniel Baker'
-              />
-            </Grid.Column>
-            <Grid.Column>
-              <Card
-                image={Daniel}
-                header='Daniel Baker'
-              />
-            </Grid.Column>
-            <Grid.Column>
-              <Card
-                image={Daniel}
-                header='Daniel Baker'
-              />
-            </Grid.Column>
-            <Grid.Column>
-              <Card
-                image={Daniel}
-                header='Daniel Baker'
-              />
-            </Grid.Column>
-          </Grid.Row>
+        <Grid columns={5} padded stackable >
+          <CharacterCard image={Daniel} episode={1} />
+          <CharacterCard image={Daniel} episode={1} />
+          <CharacterCard image={Daniel} episode={1} />
+          <CharacterCard image={Daniel} episode={1} />
+          <CharacterCard image={Daniel} episode={4} />
+          <CharacterCard image={Daniel} episode={6} />
         </Grid>
 
       </Grid.Column>
