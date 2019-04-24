@@ -1,9 +1,11 @@
 import React from 'react';
 import './App.css';
-import { Grid, Header, Icon, Card, Divider } from 'semantic-ui-react'
+import { Grid, Header, Icon, Card, Divider, Table } from 'semantic-ui-react'
 import Elliot from './images/jamie.jpg'
 import Daniel from './images/daniel.jpg'
 import CharacterCard from './components/CharacterCard'
+import PlayerCard from './components/PlayerCard'
+
 
 function App() {
   return (
@@ -54,10 +56,39 @@ function App() {
             <Header.Content>People</Header.Content>
           </Header>
         </Grid.Row>
+
+        <Grid>
+          <Grid.Column width={1}>
+
+          </Grid.Column>
+          <Grid.Column width={14}>
+            <Table size='small' >
+              <Table.Header>
+                <Table.Row>
+                  <Table.HeaderCell>Position</Table.HeaderCell>
+                  <Table.HeaderCell>Picture Perfect</Table.HeaderCell>
+                  <Table.HeaderCell>Name</Table.HeaderCell>
+                  <Table.HeaderCell>Points</Table.HeaderCell>
+                </Table.Row>
+              </Table.Header>
+
+              <Table.Body>
+                <PlayerCard image={Elliot} name='Jay Shah' position='1' points='15' />
+                <PlayerCard image={Daniel} name='Jay Shah' position='1' points='15' />
+                <PlayerCard image={Elliot} name='Jay Shah' position='1' points='15' />
+                <PlayerCard image={Daniel} name='Jay Shah' position='1' points='15' />
+              </Table.Body>
+            </Table>
+          </Grid.Column>
+          <Grid.Column width={1}>
+
+          </Grid.Column>
+        </Grid>
+
       </Grid.Column>
 
 
-    </Grid>
+    </Grid >
 
   );
 }
