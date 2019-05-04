@@ -1,8 +1,10 @@
 import React from 'react';
 import './App.css';
-import { Grid, Header, Icon, Card, Divider, Table } from 'semantic-ui-react'
+import { Grid, Header, Icon, Card, Divider, Table, Image } from 'semantic-ui-react'
 import Elliot from './images/jamie.jpg'
 import Daniel from './images/daniel.jpg'
+import GOT from './images/got.png'
+import GOT1 from './images/got1.png'
 import CharacterCard from './components/CharacterCard'
 import PlayerCard from './components/PlayerCard'
 
@@ -12,11 +14,9 @@ function App() {
     <Grid divided columns={2} padded stackable  >
 
       <Grid.Column  >
-        <Grid.Row className="Title"  >
-          <Header as='h2' icon textAlign='center'   >
-            <Icon name='users' circular />
-            <Header.Content>Characters</Header.Content>
-          </Header>
+        <Grid.Row className="Title" centered >
+          <Image src={GOT} rounded size='medium' centered />
+
         </Grid.Row>
         <Grid.Row  >
           <Header as='h2' icon textAlign='left' className="Alive" color="green">
@@ -51,10 +51,7 @@ function App() {
 
       <Grid.Column >
         <Grid.Row className="Title"  >
-          <Header as='h2' icon textAlign='center'  >
-            <Icon name='users' circular />
-            <Header.Content>People</Header.Content>
-          </Header>
+          <Image src={GOT1} rounded size='medium' centered />
         </Grid.Row>
 
         <Grid>
@@ -73,10 +70,10 @@ function App() {
               </Table.Header>
 
               <Table.Body>
-                <PlayerCard image={Elliot} name='Jay Shah' position='1' points='15' />
-                <PlayerCard image={Daniel} name='Jay Shah' position='1' points='15' />
-                <PlayerCard image={Elliot} name='Jay Shah' position='1' points='15' />
-                <PlayerCard image={Daniel} name='Jay Shah' position='1' points='15' />
+                <PlayerCard image={require('./images/jamie.jpg')} name='Jay Shah' position='1' points='15' />
+                <PlayerCard image={require('./images/jamie.jpg')} name='Jay Shah' position='1' points='15' />
+                <PlayerCard image={require('./images/jamie.jpg')} name='Jay Shah' position='1' points='15' />
+                <PlayerCard image={require('./images/jamie.jpg')} name='Jay Shah' position='1' points='15' />
               </Table.Body>
             </Table>
           </Grid.Column>

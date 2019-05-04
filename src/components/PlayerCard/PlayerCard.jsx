@@ -5,7 +5,7 @@ const PlayerCard = ({ image, position, name, points }) => {
     return (
         <Table.Row>
             <Table.Cell width={2}>
-                <Label ribbon color='yellow'>{position}</Label>
+                <Label ribbon color='blue'>{position}</Label>
             </Table.Cell>
             <Table.Cell width={3}> <Image src={image} size='tiny' circular /></Table.Cell>
             <Table.Cell width={5}>
