@@ -1,11 +1,11 @@
 import React from 'react'
 import { Table, Image, Label, Header } from 'semantic-ui-react'
 
-const PlayerCard = ({ image, position, name, points }) => {
+const PlayerCard = ({ image, position, name, points, ribbonColor }) => {
     return (
         <Table.Row>
             <Table.Cell width={2}>
-                <Label ribbon color='blue'>{position}</Label>
+                <Label ribbon color={ribbonColor}>{position}</Label>
             </Table.Cell>
             <Table.Cell width={3}> <Image src={image} size='tiny' circular /></Table.Cell>
             <Table.Cell width={5}>
