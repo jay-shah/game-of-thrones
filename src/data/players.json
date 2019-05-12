@@ -1,0 +1,230 @@
+{
+    "Jay Shah": {
+        "Jon Snow": {
+            "alive": true,
+            "episode": null
+        },
+        "Sansa Stark": {
+            "alive": false,
+            "episode": null
+        },
+        "Arya Stark": {
+            "alive": true,
+            "episode": null
+        },
+        "Bran Stark": {
+            "alive": false,
+            "episode": null
+        },
+        "Cersei Lannister": {
+            "alive": false,
+            "episode": null
+        },
+        "Jaime Lannister": {
+            "alive": false,
+            "episode": null
+        },
+        "Tyrion Lannister": {
+            "alive": false,
+            "episode": null
+        },
+        "Daenerys Targaryen": {
+            "alive": true,
+            "episode": null
+        },
+        "Yara Greyjoy": {
+            "alive": false,
+            "episode": null
+        },
+        "Theon Greyjoy": {
+            "alive": false,
+            "episode": null
+        },
+        "Melisandre": {
+            "alive": false,
+            "episode": null
+        },
+        "Jorah Mormont": {
+            "alive": true,
+            "episode": null
+        },
+        "The Hound": {
+            "alive": true,
+            "episode": null
+        },
+        "The Moutain": {
+            "alive": false,
+            "episode": null
+        },
+        "Samwell Tarley": {
+            "alive": true,
+            "episode": null
+        },
+        "Gilly": {
+            "alive": true,
+            "episode": null
+        },
+        "Sam (Child)": {
+            "alive": true,
+            "episode": null
+        },
+        "Lord Varys": {
+            "alive": true,
+            "episode": null
+        },
+        "Brienne of Tarth": {
+            "alive": true,
+            "episode": null
+        },
+        "Davos Seaworth": {
+            "alive": false,
+            "episode": null
+        },
+        "Bronn": {
+            "alive": true,
+            "episode": null
+        },
+        "Podrick Payne": {
+            "alive": true,
+            "episode": null
+        },
+        "Tormund Giantsbane": {
+            "alive": false,
+            "episode": null
+        },
+        "Grey Worm": {
+            "alive": true,
+            "episode": null
+        },
+        "Gendry": {
+            "alive": true,
+            "episode": null
+        },
+        "Beric Dondarrion": {
+            "alive": true,
+            "episode": null
+        },
+        "Euron Greyjoy": {
+            "alive": false,
+            "episode": null
+        },
+        "The Night King": {
+            "alive": false,
+            "episode": null
+        }
+    },
+    "Surabhi Prasad": {
+        "Jon Snow": {
+            "alive": true,
+            "episode": null
+        },
+        "Sansa Stark": {
+            "alive": true,
+            "episode": null
+        },
+        "Arya Stark": {
+            "alive": false,
+            "episode": null
+        },
+        "Bran Stark": {
+            "alive": false,
+            "episode": null
+        },
+        "Cersei Lannister": {
+            "alive": false,
+            "episode": 6
+        },
+        "Jaime Lannister": {
+            "alive": false,
+            "episode": null
+        },
+        "Tyrion Lannister": {
+            "alive": true,
+            "episode": null
+        },
+        "Daenerys Targaryen": {
+            "alive": false,
+            "episode": null
+        },
+        "Yara Greyjoy": {
+            "alive": true,
+            "episode": null
+        },
+        "Theon Greyjoy": {
+            "alive": false,
+            "episode": null
+        },
+        "Melisandre": {
+            "alive": false,
+            "episode": null
+        },
+        "Jorah Mormont": {
+            "alive": true,
+            "episode": null
+        },
+        "The Hound": {
+            "alive": false,
+            "episode": null
+        },
+        "The Moutain": {
+            "alive": false,
+            "episode": null
+        },
+        "Samwell Tarley": {
+            "alive": true,
+            "episode": null
+        },
+        "Gilly": {
+            "alive": true,
+            "episode": null
+        },
+        "Sam (Child)": {
+            "alive": true,
+            "episode": null
+        },
+        "Lord Varys": {
+            "alive": false,
+            "episode": null
+        },
+        "Brienne of Tarth": {
+            "alive": true,
+            "episode": null
+        },
+        "Davos Seaworth": {
+            "alive": true,
+            "episode": null
+        },
+        "Bronn": {
+            "alive": true,
+            "episode": null
+        },
+        "Podrick Payne": {
+            "alive": true,
+            "episode": null
+        },
+        "Tormund Giantsbane": {
+            "alive": false,
+            "episode": null
+        },
+        "Grey Worm": {
+            "alive": false,
+            "episode": null
+        },
+        "Gendry": {
+            "alive": true,
+            "episode": null
+        },
+        "Beric Dondarrion": {
+            "alive": false,
+            "episode": null
+        },
+        "Euron Greyjoy": {
+            "alive": false,
+            "episode": null
+        },
+        "The Night King": {
+            "alive": false,
+            "episode": 5
+        }
+    }
+}
