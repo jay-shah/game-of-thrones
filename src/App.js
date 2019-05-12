@@ -1,13 +1,12 @@
 import './App.css';
 import { Grid, Header, Divider, Table, Image } from 'semantic-ui-react'
-import Elliot from './images/jamie.jpg'
-import Daniel from './images/daniel.jpg'
 import GOT from './images/got.png'
 import GOT1 from './images/got1.png'
 import CharacterCard from './components/CharacterCard'
 import PlayerCard from './components/PlayerCard'
 import React, { Component } from 'react'
 import Characters from './data/characters.json'
+import Players from './data/players.json'
 
 export default class App extends Component {
 
@@ -15,7 +14,7 @@ export default class App extends Component {
 
     const alive = Object.keys(Characters).map((name) => {
       if (Characters[name]["alive"]) {
-        return (<CharacterCard image={Elliot} name={name} />)
+        return (<CharacterCard image={require('./images/' + name + '.jpg')} name={name} />)
       }
     })
     return alive
@@ -25,10 +24,41 @@ export default class App extends Component {
 
     const dead = Object.keys(Characters).map((name) => {
       if (!Characters[name]["alive"]) {
-        return (<CharacterCard image={Daniel} name={name} />)
+        return (<CharacterCard image={require('./images/' + name + '.jpg')} name={name} />)
       }
     })
     return dead
+  }
+
+  getPlayerCard = () => {
+    const playerScores = this.calculatePoints()
+    const colors = ["yellow", "olive", "green", "teal", "blue", "violet", "purple", "pink", "brown", "red", "orange"]
+    const player = playerScores.map((player, index) => {
+      return (<PlayerCard image={require('./images/' + player[0] + '.jpg')} name={player[0]} position={index + 1} points={player[1]} ribbonColor={colors[index]} />)
+    })
+    return player
+  }
+
+  calculatePoints = () => {
+
+    let scoreMap = {}
+    Object.keys(Players).map((player) => {
+      let score = 0
+      Object.keys(Characters).forEach((character) => {
+        if (Players[player][character]["alive"] === Characters[character]["alive"]) {
+          score++;
+        }
+      })
+      scoreMap[player] = score
+    })
+    var sortable = [];
+    for (var score in scoreMap) {
+      sortable.push([score, scoreMap[score]]);
+    }
+
+    return (sortable.sort(function (a, b) {
+      return a[1] - b[1];
+    }))
   }
 
   render() {
@@ -82,10 +112,7 @@ export default class App extends Component {
                 </Table.Header>
 
                 <Table.Body>
-                  <PlayerCard image={require('./images/jamie.jpg')} name='Jay Shah' position='1' points='15' />
-                  <PlayerCard image={require('./images/jamie.jpg')} name='Jay Shah' position='1' points='15' />
-                  <PlayerCard image={require('./images/jamie.jpg')} name='Jay Shah' position='1' points='15' />
-                  <PlayerCard image={require('./images/jamie.jpg')} name='Jay Shah' position='1' points='15' />
+                  {this.getPlayerCard()}
                 </Table.Body>
               </Table>
             </Grid.Column>
