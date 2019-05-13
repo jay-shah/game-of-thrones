@@ -24,7 +24,7 @@ export default class App extends Component {
 
     const dead = Object.keys(Characters).map((name) => {
       if (!Characters[name]["alive"]) {
-        return (<CharacterCard image={require('./images/characters/' + name + '.jpg')} name={name} />)
+        return (<CharacterCard image={require('./images/characters/' + name + '.jpg')} name={name} episode={Characters[name]["episode"]} />)
       }
     })
     return dead
