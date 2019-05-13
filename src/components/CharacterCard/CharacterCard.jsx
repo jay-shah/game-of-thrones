@@ -4,7 +4,7 @@ import { Grid, Card, Image } from 'semantic-ui-react'
 
 const CharacterCard = ({ image, episode, name }) => {
     return (
-        <Grid.Column mobile={4} tablet={8} computer={3}>
+        <Grid.Column mobile={4} tablet={8} computer={4}>
             <Card centered>
                 <Image src={image} />
                 <Card.Content>

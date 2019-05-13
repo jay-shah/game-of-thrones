@@ -1,7 +1,7 @@
 import './App.css';
 import { Grid, Header, Divider, Table, Image } from 'semantic-ui-react'
 import GOT from './images/got.png'
-import GOT1 from './images/got1.png'
+import Throne from './images/throne.png'
 import CharacterCard from './components/CharacterCard'
 import PlayerCard from './components/PlayerCard'
 import React, { Component } from 'react'
@@ -14,7 +14,7 @@ export default class App extends Component {
 
     const alive = Object.keys(Characters).map((name) => {
       if (Characters[name]["alive"]) {
-        return (<CharacterCard image={require('./images/' + name + '.jpg')} name={name} />)
+        return (<CharacterCard image={require('./images/characters/' + name + '.jpg')} name={name} />)
       }
     })
     return alive
@@ -24,7 +24,7 @@ export default class App extends Component {
 
     const dead = Object.keys(Characters).map((name) => {
       if (!Characters[name]["alive"]) {
-        return (<CharacterCard image={require('./images/' + name + '.jpg')} name={name} />)
+        return (<CharacterCard image={require('./images/characters/' + name + '.jpg')} name={name} />)
       }
     })
     return dead
@@ -34,7 +34,7 @@ export default class App extends Component {
     const playerScores = this.calculatePoints()
     const colors = ["yellow", "olive", "green", "teal", "blue", "violet", "purple", "pink", "brown", "red", "orange"]
     const player = playerScores.map((player, index) => {
-      return (<PlayerCard image={require('./images/' + player[0] + '.jpg')} name={player[0]} position={index + 1} points={player[1]} ribbonColor={colors[index]} />)
+      return (<PlayerCard image={require('./images/players/' + player[0] + '.jpg')} name={player[0]} position={index + 1} points={player[1]} ribbonColor={colors[index]} />)
     })
     return player
   }
@@ -71,16 +71,17 @@ export default class App extends Component {
 
           </Grid.Row>
           <Grid.Row  >
-            <Header as='h2' icon textAlign='left' className="Alive" color="green">
+            <Header as='h1' icon textAlign='center' className="Alive" color="green">
               <Header.Content>ALIVE</Header.Content>
             </Header>
+
           </Grid.Row>
           <Grid padded stackable >
             {this.getAliveCharacters()}
           </Grid>
           <Divider hidden />
           <Grid.Row  >
-            <Header as='h2' icon textAlign='left' className="Alive" color="red">
+            <Header as='h1' icon textAlign='center' className="Alive" color="red">
               <Header.Content>DEAD</Header.Content>
             </Header>
           </Grid.Row>
@@ -90,10 +91,9 @@ export default class App extends Component {
 
         </Grid.Column>
 
-
         <Grid.Column >
           <Grid.Row className="Title"  >
-            <Image src={GOT1} rounded size='medium' centered />
+            <Image src={Throne} rounded size='medium' centered />
           </Grid.Row>
 
           <Grid>
