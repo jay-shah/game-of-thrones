@@ -16,12 +16,12 @@
         "episode": null
     },
     "Cersei Lannister": {
-        "alive": true,
-        "episode": null
+        "alive": false,
+        "episode": 5
     },
     "Jaime Lannister": {
-        "alive": true,
-        "episode": null
+        "alive": false,
+        "episode": 5
     },
     "Tyrion Lannister": {
         "alive": true,
@@ -37,23 +37,23 @@
     },
     "Theon Greyjoy": {
         "alive": false,
-        "episode": null
+        "episode": 3
     },
     "Melisandre": {
         "alive": false,
-        "episode": null
+        "episode": 3
     },
     "Jorah Mormont": {
         "alive": false,
-        "episode": null
+        "episode": 3
     },
     "The Hound": {
-        "alive": true,
-        "episode": null
+        "alive": false,
+        "episode": 5
     },
     "The Moutain": {
-        "alive": true,
-        "episode": null
+        "alive": false,
+        "episode": 5
     },
     "Samwell Tarley": {
         "alive": true,
@@ -68,8 +68,8 @@
         "episode": null
     },
     "Lord Varys": {
-        "alive": true,
-        "episode": null
+        "alive": false,
+        "episode": 5
     },
     "Brienne of Tarth": {
         "alive": true,
@@ -101,14 +101,14 @@
     },
     "Beric Dondarrion": {
         "alive": false,
-        "episode": null
+        "episode": 3
     },
     "Euron Greyjoy": {
-        "alive": true,
-        "episode": null
+        "alive": false,
+        "episode": 5
     },
     "The Night King": {
         "alive": false,
-        "episode": null
+        "episode": 3
     }
 }
