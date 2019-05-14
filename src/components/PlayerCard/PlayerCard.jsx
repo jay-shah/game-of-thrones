@@ -26,6 +26,27 @@ const PlayerCard = ({ image, position, name, points, ribbonColor }) => {
         )
     }
 
+    const random = (character) => {
+        if (Players[name]["characters"][character]['alive'] === Characters["characters"][character]["alive"]) {
+            if (Players[name]["characters"][character]['episode']) {
+                if (Players[name]["characters"][character]['episode'] == Characters["characters"][character]["episode"]) {
+                    return (
+                        <Header className={styles.alive} textAlign='center'> <Icon name='check' /></Header>
+                    )
+                }
+                else {
+                    return (< Header className={styles.dead} textAlign='center' > <Icon name='close' /></Header >)
+                }
+            }
+            if (!Players[name]["characters"][character]['alive'] && !Characters["characters"][character]["alive"]) {
+                return (
+                    <Header className={styles.alive} textAlign='center'> <Icon name='check' /></Header>
+                )
+            }
+        }
+        else return (< Header className={styles.dead} textAlign='center' > <Icon name='close' /></Header >)
+    }
+
     const aliveCharacters = () => (
         Object.keys(Players[name]["characters"]).map((character) => {
             if (Players[name]["characters"][character]['alive']) {
@@ -54,10 +75,7 @@ const PlayerCard = ({ image, position, name, points, ribbonColor }) => {
                         <List.Content>
                             <Image src={require('../../images/characters/' + character + '.jpg')} rounded size='tiny' />
                             <Header className={styles.dead} textAlign='center' as='h3'>DEAD {Players[name]["characters"][character]['episode'] ? Players[name]["characters"][character]['episode'] : null}</Header>
-                            {!Players[name]["characters"][character]['alive'] === !Characters["characters"][character]["alive"] ?
-                                <Header className={styles.alive} textAlign='center'> <Icon name='check' /></Header> :
-                                <Header className={styles.dead} textAlign='center'> <Icon name='close' /></Header>
-                            }
+                            {random(character)}
                         </List.Content>
                     </List.Item>
                 )
