@@ -1,3 +1,20 @@
 .tablerow {
     cursor: pointer;
 }
+
+.listitem {
+    margin-left: 0 !important;
+    margin-right: 1em !important;
+}
+
+.dead {
+    color: red !important;
+}
+
+.alive {
+    color: green !important
+}
+
+.bonus {
+    color: #6435c9 !important
+}

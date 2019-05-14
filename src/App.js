@@ -1,5 +1,9 @@
+// Up to Bhavin
+
+
+
 import './App.css';
-import { Grid, Header, Divider, Table, Image } from 'semantic-ui-react'
+import { Grid, Header, Divider, Table, Image, Icon } from 'semantic-ui-react'
 import GOT from './images/got.png'
 import Throne from './images/throne.png'
 import CharacterCard from './components/CharacterCard'
@@ -12,8 +16,8 @@ export default class App extends Component {
 
   getAliveCharacters = () => {
 
-    const alive = Object.keys(Characters).map((name) => {
-      if (Characters[name]["alive"]) {
+    const alive = Object.keys(Characters['characters']).map((name) => {
+      if (Characters['characters'][name]["alive"]) {
         return (<CharacterCard image={require('./images/characters/' + name + '.jpg')} name={name} />)
       }
     })
@@ -22,9 +26,9 @@ export default class App extends Component {
 
   getDeadCharacters = () => {
 
-    const dead = Object.keys(Characters).map((name) => {
-      if (!Characters[name]["alive"]) {
-        return (<CharacterCard image={require('./images/characters/' + name + '.jpg')} name={name} episode={Characters[name]["episode"]} />)
+    const dead = Object.keys(Characters['characters']).map((name) => {
+      if (!Characters['characters'][name]["alive"]) {
+        return (<CharacterCard image={require('./images/characters/' + name + '.jpg')} name={name} episode={Characters['characters'][name]["episode"]} />)
       }
     })
     return dead
@@ -33,7 +37,7 @@ export default class App extends Component {
   getPlayerCard = () => {
     const playerScores = this.calculatePoints()
     const colors = ["yellow", "olive", "green", "teal", "blue", "violet", "purple", "pink", "brown", "red", "orange"]
-    const player = playerScores.map((player, index) => {
+    const player = playerScores.slice(0).reverse().map((player, index) => {
       return (<PlayerCard image={require('./images/players/' + player[0] + '.jpg')} name={player[0]} position={index + 1} points={player[1]} ribbonColor={colors[index]} />)
     })
     return player
@@ -44,11 +48,36 @@ export default class App extends Component {
     let scoreMap = {}
     Object.keys(Players).map((player) => {
       let score = 0
-      Object.keys(Characters).forEach((character) => {
-        if (Players[player][character]["alive"] === Characters[character]["alive"]) {
+      Object.keys(Characters['characters']).forEach((character) => {
+        if (Players[player]["characters"][character]["alive"] && Characters['characters'][character]["alive"]) {
           score++;
         }
+
+        if (!Players[player]["characters"][character]["alive"] && !Characters['characters'][character]["alive"]) {
+          if (!Players[player]["characters"][character]["episode"]) {
+            score++;
+          }
+          else if (Players[player]["characters"][character]["episode"] === Characters['characters'][character]["episode"]) {
+            score += 2;
+          }
+        }
       })
+
+      if (Players[player]['bonus']["1"] === Characters["bonus"]["1"]) {
+        score++
+      }
+      if (Players[player]['bonus']["2"] === Characters["bonus"]["2"]) {
+        score++
+      }
+      if (Players[player]['bonus']["3"] === Characters["bonus"]["3"]) {
+        score++
+      }
+      if (Players[player]['bonus']["4"] === Characters["bonus"]["4"]) {
+        score += 2
+      }
+      if (Players[player]['bonus']["5"] === Characters["bonus"]["5"]) {
+        score += 4
+      }
       scoreMap[player] = score
     })
     var sortable = [];
@@ -88,6 +117,38 @@ export default class App extends Component {
           <Grid columns={5} padded stackable >
             {this.getDeadCharacters()}
           </Grid>
+          <Divider hidden />
+          <Grid.Row  >
+            <Header as='h1' icon textAlign='center' className="Alive" color="violet">
+              <Header.Content>BONUS</Header.Content>
+            </Header>
+          </Grid.Row>
+          <Grid.Row  >
+            <Header as='h2'>
+              <Icon name='child' />
+              <Header.Content>Is Daenerys pregnant? <span className="answers">{Characters['bonus']["1"]}</span></Header.Content>
+            </Header>
+            <Divider hidden />
+            <Header as='h2'>
+              <Icon name='eye' />
+              <Header.Content>How many Dragons Left? <span className="answers">{Characters['bonus']["2"]}</span></Header.Content>
+            </Header>
+            <Divider hidden />
+            <Header as='h2'>
+              <Icon name='male' />
+              <Header.Content>Which Clegane triumphs? <span className="answers">{Characters['bonus']["3"]}</span></Header.Content>
+            </Header>
+            <Divider hidden />
+            <Header as='h2'>
+              <Icon name='chess knight' />
+              <Header.Content>If the Night King Dies, who kills him? <span className="answers">{Characters['bonus']["4"]}</span></Header.Content>
+            </Header>
+            <Divider hidden />
+            <Header as='h2'>
+              <Icon name='wheelchair' />
+              <Header.Content>Who holds the Iron Throne at the end? <span className="answers">{Characters['bonus']["1"]}</span></Header.Content>
+            </Header>
+          </Grid.Row>
 
         </Grid.Column>
 

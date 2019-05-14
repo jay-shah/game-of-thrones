@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './PlayerCard.module.css'
-import { Table, Image, Label, Header, Modal } from 'semantic-ui-react'
+import Players from '../../data/players'
+import { Table, Image, Label, Header, Modal, List, Icon, Divider } from 'semantic-ui-react'
 
 const PlayerCard = ({ image, position, name, points, ribbonColor }) => {
 
@@ -24,18 +25,91 @@ const PlayerCard = ({ image, position, name, points, ribbonColor }) => {
         )
     }
 
+    const aliveCharacters = () => (
+        Object.keys(Players[name]["characters"]).map((character) => {
+            if (Players[name]["characters"][character]['alive']) {
+                return (
+                    <List.Item className={styles.listitem}>
+                        <List.Content>
+                            <Image src={require('../../images/characters/' + character + '.jpg')} rounded size='tiny' />
+                            <Header className={styles.alive} textAlign='center' as='h3'>ALIVE</Header>
+                        </List.Content>
+                    </List.Item>
+                )
+            }
+        })
+    )
+
+    const deadCharacters = () => (
+        Object.keys(Players[name]["characters"]).map((character) => {
+            if (!Players[name]["characters"][character]['alive']) {
+                return (
+                    <List.Item className={styles.listitem}>
+                        <List.Content>
+                            <Image src={require('../../images/characters/' + character + '.jpg')} rounded size='tiny' />
+                            <Header className={styles.dead} textAlign='center' as='h3'>DEAD {Players[name]["characters"][character]['episode'] ? Players[name]["characters"][character]['episode'] : null}</Header>
+                        </List.Content>
+                    </List.Item>
+                )
+            }
+        })
+
+    )
+
+
 
     return (
         <Modal trigger={tableRow()}>
-            <Modal.Header>{name}</Modal.Header>
-            <Modal.Content image>
+            {/* <Modal.Header>{name}</Modal.Header> */}
+            <Modal.Content image scrolling>
                 <Image wrapped size='medium' src={image} />
                 <Modal.Description>
-                    <Header>Default Profile Image</Header>
-                    <p>We've found the following gravatar image associated with your e-mail address.</p>
-                    <p>Is it okay to use this photo?</p>
+                    <Header as='h1'>{name}</Header>
                 </Modal.Description>
             </Modal.Content>
+            <Modal.Content>
+                <Divider fitted hidden />
+                <List horizontal>
+                    {aliveCharacters()}
+                </List>
+                <Divider />
+                <List horizontal>
+                    {deadCharacters()}
+                </List>
+                <Divider />
+                <List >
+                    <List.Item >
+                        <List.Content>
+                            <Header as='h2'>
+                                <Icon name='child' />
+                                <Header.Content>Is Daenerys pregnant? <span className={styles.bonus}>{Players[name]['bonus']["1"]}</span></Header.Content>
+                            </Header>
+                            <Divider hidden />
+                            <Header as='h2'>
+                                <Icon name='eye' />
+                                <Header.Content>How many Dragons Left? <span className={styles.bonus}>{Players[name]['bonus']["2"]}</span></Header.Content>
+                            </Header>
+                            <Divider hidden />
+                            <Header as='h2'>
+                                <Icon name='male' />
+                                <Header.Content>Which Clegane triumphs? <span className={styles.bonus}>{Players[name]['bonus']["3"]}</span></Header.Content>
+                            </Header>
+                            <Divider hidden />
+                            <Header as='h2'>
+                                <Icon name='chess knight' />
+                                <Header.Content>If the Night King Dies, who kills him? <span className={styles.bonus}>{Players[name]['bonus']["4"]}</span></Header.Content>
+                            </Header>
+                            <Divider hidden />
+                            <Header as='h2'>
+                                <Icon name='wheelchair' />
+                                <Header.Content>Who holds the Iron Throne at the end? <span className={styles.bonus}>{Players[name]['bonus']["5"]}</span></Header.Content>
+                            </Header>
+                        </List.Content>
+                    </List.Item>
+                </List>
+
+            </Modal.Content>
+
         </Modal>
 
     )
