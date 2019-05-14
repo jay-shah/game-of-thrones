@@ -54,7 +54,7 @@ const PlayerCard = ({ image, position, name, points, ribbonColor }) => {
                         <List.Content>
                             <Image src={require('../../images/characters/' + character + '.jpg')} rounded size='tiny' />
                             <Header className={styles.dead} textAlign='center' as='h3'>DEAD {Players[name]["characters"][character]['episode'] ? Players[name]["characters"][character]['episode'] : null}</Header>
-                            {Players[name]["characters"][character]['alive'] === Characters["characters"][character]["alive"] ?
+                            {!Players[name]["characters"][character]['alive'] === !Characters["characters"][character]["alive"] ?
                                 <Header className={styles.alive} textAlign='center'> <Icon name='check' /></Header> :
                                 <Header className={styles.dead} textAlign='center'> <Icon name='close' /></Header>
                             }
