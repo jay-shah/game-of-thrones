@@ -752,7 +752,7 @@
                 "episode": null
             },
             "Bran Stark": {
-                "alive": false,
+                "alive": true,
                 "episode": null
             },
             "Cersei Lannister": {
@@ -768,7 +768,7 @@
                 "episode": null
             },
             "Daenerys Targaryen": {
-                "alive": true,
+                "alive": false,
                 "episode": null
             },
             "Yara Greyjoy": {
@@ -784,11 +784,11 @@
                 "episode": null
             },
             "Jorah Mormont": {
-                "alive": true,
+                "alive": false,
                 "episode": null
             },
             "The Hound": {
-                "alive": true,
+                "alive": false,
                 "episode": null
             },
             "The Moutain": {
@@ -796,7 +796,7 @@
                 "episode": null
             },
             "Samwell Tarley": {
-                "alive": true,
+                "alive": false,
                 "episode": null
             },
             "Gilly": {
@@ -808,7 +808,7 @@
                 "episode": null
             },
             "Lord Varys": {
-                "alive": true,
+                "alive": false,
                 "episode": null
             },
             "Brienne of Tarth": {
@@ -820,7 +820,7 @@
                 "episode": null
             },
             "Bronn": {
-                "alive": true,
+                "alive": false,
                 "episode": null
             },
             "Podrick Payne": {
@@ -832,15 +832,15 @@
                 "episode": null
             },
             "Grey Worm": {
-                "alive": true,
+                "alive": false,
                 "episode": null
             },
             "Gendry": {
-                "alive": true,
+                "alive": false,
                 "episode": null
             },
             "Beric Dondarrion": {
-                "alive": true,
+                "alive": false,
                 "episode": null
             },
             "Euron Greyjoy": {
@@ -853,11 +853,11 @@
             }
         },
         "bonus": {
-            "1": "Possibly",
-            "2": "1",
+            "1": "No",
+            "2": "0",
             "3": "Both Die",
-            "4": "Arya Stark",
-            "5": "Don't know yet"
+            "4": "Jon Snow",
+            "5": "Arya Stark"
         }
     },
     "Safina Siddiqui": {
@@ -867,7 +867,7 @@
                 "episode": null
             },
             "Sansa Stark": {
-                "alive": false,
+                "alive": true,
                 "episode": null
             },
             "Arya Stark": {
@@ -880,18 +880,18 @@
             },
             "Cersei Lannister": {
                 "alive": false,
-                "episode": null
+                "episode": 6
             },
             "Jaime Lannister": {
-                "alive": false,
+                "alive": true,
                 "episode": null
             },
             "Tyrion Lannister": {
-                "alive": false,
+                "alive": true,
                 "episode": null
             },
             "Daenerys Targaryen": {
-                "alive": true,
+                "alive": false,
                 "episode": null
             },
             "Yara Greyjoy": {
@@ -899,7 +899,7 @@
                 "episode": null
             },
             "Theon Greyjoy": {
-                "alive": false,
+                "alive": true,
                 "episode": null
             },
             "Melisandre": {
@@ -907,7 +907,7 @@
                 "episode": null
             },
             "Jorah Mormont": {
-                "alive": true,
+                "alive": false,
                 "episode": null
             },
             "The Hound": {
@@ -931,7 +931,7 @@
                 "episode": null
             },
             "Lord Varys": {
-                "alive": true,
+                "alive": false,
                 "episode": null
             },
             "Brienne of Tarth": {
@@ -939,7 +939,7 @@
                 "episode": null
             },
             "Davos Seaworth": {
-                "alive": false,
+                "alive": true,
                 "episode": null
             },
             "Bronn": {
@@ -951,11 +951,11 @@
                 "episode": null
             },
             "Tormund Giantsbane": {
-                "alive": false,
+                "alive": true,
                 "episode": null
             },
             "Grey Worm": {
-                "alive": true,
+                "alive": false,
                 "episode": null
             },
             "Gendry": {
@@ -963,7 +963,7 @@
                 "episode": null
             },
             "Beric Dondarrion": {
-                "alive": true,
+                "alive": false,
                 "episode": null
             },
             "Euron Greyjoy": {
@@ -972,15 +972,15 @@
             },
             "The Night King": {
                 "alive": false,
-                "episode": null
+                "episode": 6
             }
         },
         "bonus": {
-            "1": "Possibly",
-            "2": "1",
-            "3": "Both Die",
-            "4": "Arya Stark",
-            "5": "Don't know yet"
+            "1": "Yes",
+            "2": "2",
+            "3": "The Hound",
+            "4": "Daenerys Targaryen",
+            "5": "Daenerys Targaryen"
         }
     },
     "Vaidehi Naik": {
@@ -991,10 +991,10 @@
             },
             "Sansa Stark": {
                 "alive": false,
-                "episode": null
+                "episode": 5
             },
             "Arya Stark": {
-                "alive": true,
+                "alive": false,
                 "episode": null
             },
             "Bran Stark": {
@@ -1002,15 +1002,15 @@
                 "episode": null
             },
             "Cersei Lannister": {
-                "alive": false,
+                "alive": true,
                 "episode": null
             },
             "Jaime Lannister": {
-                "alive": false,
+                "alive": true,
                 "episode": null
             },
             "Tyrion Lannister": {
-                "alive": false,
+                "alive": true,
                 "episode": null
             },
             "Daenerys Targaryen": {
@@ -1019,14 +1019,14 @@
             },
             "Yara Greyjoy": {
                 "alive": false,
-                "episode": null
+                "episode": 3
             },
             "Theon Greyjoy": {
-                "alive": false,
+                "alive": true,
                 "episode": null
             },
             "Melisandre": {
-                "alive": false,
+                "alive": true,
                 "episode": null
             },
             "Jorah Mormont": {
@@ -1038,7 +1038,7 @@
                 "episode": null
             },
             "The Moutain": {
-                "alive": false,
+                "alive": true,
                 "episode": null
             },
             "Samwell Tarley": {
@@ -1062,7 +1062,7 @@
                 "episode": null
             },
             "Davos Seaworth": {
-                "alive": false,
+                "alive": true,
                 "episode": null
             },
             "Bronn": {
@@ -1074,7 +1074,7 @@
                 "episode": null
             },
             "Tormund Giantsbane": {
-                "alive": false,
+                "alive": true,
                 "episode": null
             },
             "Grey Worm": {
@@ -1090,20 +1090,20 @@
                 "episode": null
             },
             "Euron Greyjoy": {
-                "alive": false,
+                "alive": true,
                 "episode": null
             },
             "The Night King": {
-                "alive": false,
+                "alive": true,
                 "episode": null
             }
         },
         "bonus": {
-            "1": "Possibly",
+            "1": "Yes",
             "2": "1",
-            "3": "Both Die",
-            "4": "Arya Stark",
-            "5": "Don't know yet"
+            "3": "The Hound",
+            "4": "Bran Stark",
+            "5": "Jon Snow"
         }
     }
 }
