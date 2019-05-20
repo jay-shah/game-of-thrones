@@ -29,8 +29,8 @@
             "episode": null
         },
         "Daenerys Targaryen": {
-            "alive": true,
-            "episode": null
+            "alive": false,
+            "episode": 6
         },
         "Yara Greyjoy": {
             "alive": true,
@@ -114,10 +114,10 @@
         }
     },
     "bonus": {
-        "1": "Possibly",
+        "1": "No",
         "2": "1",
         "3": "Both Die",
         "4": "Arya Stark",
-        "5": "Don't know yet"
+        "5": "Bran Stark"
     }
 }
